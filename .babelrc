@@ -1,0 +1,11 @@
+{
+  "presets": [
+    "flow",
+    ["env", {
+      "modules": false
+    }]
+  ],
+  "plugins": [
+    "external-helpers"
+  ]
+}

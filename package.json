@@ -1,0 +1,33 @@
+{
+  "name": "interpolate-range",
+  "version": "1.0.0",
+  "description": "Super simple numeric range interpolation",
+  "main": "bundle.js",
+  "repository": "https://github.com/jossmac/interpolate-range.git",
+  "author": "Joss Mackison <joss.mackison@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
+    "babel-tape-runner": "^2.0.1",
+    "rollup": "^0.52.0",
+    "rollup-plugin-babel": "^3.0.2",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "tape": "^4.8.0"
+  },
+  "scripts": {
+    "test": "babel-tape-runner test.js",
+    "build": "rollup -c",
+    "prepublish": "npm run build"
+  },
+  "keywords": [
+    "linear",
+    "interpolation",
+    "lerp",
+    "range",
+    "animation",
+    "animate"
+  ]
+}
