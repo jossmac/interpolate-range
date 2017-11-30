@@ -1,10 +1,10 @@
 {
   "name": "interpolate-range",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Super simple numeric range interpolation",
   "main": "bundle.js",
   "repository": "https://github.com/jossmac/interpolate-range.git",
-  "author": "Joss Mackison <joss.mackison@gmail.com>",
+  "author": "Joss Mackison",
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.26.0",
