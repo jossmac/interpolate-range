@@ -1,6 +1,6 @@
 {
   "name": "interpolate-range",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Super simple numeric range interpolation",
   "main": "bundle.js",
   "repository": "https://github.com/jossmac/interpolate-range.git",
