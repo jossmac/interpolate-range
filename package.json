@@ -21,8 +21,8 @@
     "uglify-es": "^3.2.0"
   },
   "scripts": {
-    "test": "babel-tape-runner test",
-    "build": "rollup -c",
+    "test": "BABEL_ENV=test babel-tape-runner test",
+    "build": "BABEL_ENV=production rollup -c",
     "prepublish": "npm run build"
   },
   "keywords": [

@@ -2,11 +2,11 @@
 
 import clamp from './clamp';
 
-export default function step(
+export default function linearStep(
   from: number,
   to: number,
   x: number,
   useClamp?: boolean,
 ) {
-  return useClamp ? clamp(x, from, to) : x;
+  return useClamp ? clamp(from, to, x) : x;
 }

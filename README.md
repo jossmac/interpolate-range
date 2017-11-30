@@ -19,7 +19,11 @@ import interpolate from 'interpolate-range';
 
 function generateCurve({ floor, ceil, total }) {
   const data = [];
-  const int = interpolate([floor, ceil], [0, 1], true);
+  const int = interpolate({
+		inputRange: [floor, ceil],
+		outputRange: [0, 1],
+		clamp: true,
+	});
 
   for (let k = 0; k < total; k++) {
     data.push({ x: k, y: int(k) });

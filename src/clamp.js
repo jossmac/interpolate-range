@@ -1,13 +1,13 @@
 // @flow
 
 export default function clamp(
-  value: number,
-  min: number,
-  max: number,
+  from: number,
+  to: number,
+  x: number,
 ): number {
-  let val = value;
-  if (val < min) val = min;
-  if (val > max) val = max;
+  let val = x;
+  if (val < from) val = from;
+  if (val > to) val = to;
 
   return val;
 }

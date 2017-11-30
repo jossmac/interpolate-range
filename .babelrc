@@ -1,11 +1,28 @@
 {
-  "presets": [
-    "flow",
-    ["env", {
-      "modules": false
-    }]
-  ],
-  "plugins": [
-    "external-helpers"
-  ]
+  "env": {
+    "test": {
+      "presets": [
+        "flow", ["env", {
+          "targets": {
+            "node": "current"
+          }
+        }]
+      ]
+    },
+    "production": {
+      "presets": [
+        "flow",
+        ["env", {
+          "modules": false,
+          "targets": {
+            "node": 4,
+            "browsers": ["last 2 versions"],
+          }
+        }]
+      ],
+      "plugins": [
+        "external-helpers"
+      ]
+    }
+  },
 }

@@ -2,9 +2,20 @@ import test from 'tape';
 import { interpolate, smoothStep } from '../src';
 
 test('interpolate provides correct result', function(t) {
-  const int = interpolate([100, 200], [0, 100]);
-  const intClamped = interpolate([-100, 100], [0, 1], true);
-  const intSmooth = interpolate([50, 500], [0, 1], true, smoothStep);
+  const int = interpolate({
+    inputRange: [100, 200],
+    outputRange: [0, 100],
+  });
+  const intClamped = interpolate({
+    inputRange: [-100, 100],
+    outputRange: [0, 1],
+    clamp: true,
+  });
+  const intSmooth = interpolate({
+    inputRange: [50, 500],
+    outputRange: [0, 1],
+    fn: smoothStep,
+  });
 
   // basic
   t.equal( int(1), -99 )
