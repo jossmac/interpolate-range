@@ -1,2 +1,3 @@
-# interpolate-range
-Numeric range interpolation à la ReactNative's `number.interpolate()`
+# Interpolate Range
+
+Numeric range interpolation à la ReactNative's `AnimatedValue.interpolate()`.
