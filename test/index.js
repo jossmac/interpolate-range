@@ -1,10 +1,10 @@
 import test from 'tape';
-import interpolate from './src';
+import { interpolate, smoothStep } from '../src';
 
 test('interpolate provides correct result', function(t) {
   const int = interpolate([100, 200], [0, 100]);
   const intClamped = interpolate([-100, 100], [0, 1], true);
-  const intSlope = interpolate([50, 500], [0, 1], false, 0.08);
+  const intSmooth = interpolate([50, 500], [0, 1], true, smoothStep);
 
   // basic
   t.equal( int(1), -99 )
@@ -20,12 +20,12 @@ test('interpolate provides correct result', function(t) {
   t.equal( intClamped(50), 0.75 )
   t.equal( intClamped(-150), 0 )
 
-  // alt slope
-  t.equal( intSlope(100), 4 )
-  t.equal( intSlope(500), 36 )
-  t.equal( intSlope(-50), -8 )
-  t.equal( intSlope(50), 0 )
-  t.equal( intSlope(-150), -16 )
+  // alt function
+  t.equal( intSmooth(100), 0.034293552812071325 )
+  t.equal( intSmooth(200), 0.25925925925925924 )
+  t.equal( intSmooth(300), 0.5829903978052127 )
+  t.equal( intSmooth(400), 0.8737997256515775 )
+  t.equal( intSmooth(600), 1 )
 
   t.end()
 })
